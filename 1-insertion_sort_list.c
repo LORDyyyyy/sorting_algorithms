@@ -43,7 +43,7 @@ void list_swap(listint_t *a, listint_t *b, listint_t **head)
 		return;
 	tmp1 = a->prev;
 	tmp2 = b->next;
-	
+
 	if (tmp1)
 		tmp1->next = b;
 	if (tmp2)
@@ -52,7 +52,7 @@ void list_swap(listint_t *a, listint_t *b, listint_t **head)
 	a->prev = b;
 	b->next = a;
 	b->prev = tmp1;
-	
+
 	if (tmp1 == NULL)
 		*head = b;
 }
